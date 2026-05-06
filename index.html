@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Premium Productivity Suite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1 id="app-title">Lumina</h1>
+            <nav>
+                <button class="nav-btn active" data-view="clock">Clock</button>
+                <button class="nav-btn" data-view="timer">Timer</button>
+                <button class="nav-btn" data-view="stopwatch">Stopwatch</button>
+            </nav>
+        </header>
+
+        <section id="clock-view" class="view active">
+            <div class="clock-display">
+                <div id="time">00:00:00</div>
+                <div id="date">Wednesday, May 6</div>
+            </div>
+        </section>
+
+        <section id="timer-view" class="view">
+            <div class="timer-controls">
+                <div class="input-group">
+                    <input type="number" id="minutes" placeholder="MM" min="0" max="99">
+                    <span>:</span>
+                    <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+                </div>
+                <div class="action-buttons">
+                    <button id="start-timer" class="primary-btn">Start</button>
+                    <button id="reset-timer" class="secondary-btn">Reset</button>
+                </div>
+            </div>
+            <div id="timer-display" class="big-display">00:00</div>
+        </section>
+
+        <section id="stopwatch-view" class="view">
+            <div id="stopwatch-display" class="big-display">00:00.00</div>
+            <div class="action-buttons">
+                <button id="start-stopwatch" class="primary-btn">Start</button>
+                <button id="lap-stopwatch" class="secondary-btn">Lap</button>
+                <button id="reset-stopwatch" class="secondary-btn">Reset</button>
+            </div>
+            <ul id="laps-list"></ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Lumina Design. Crafted with Precision.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
